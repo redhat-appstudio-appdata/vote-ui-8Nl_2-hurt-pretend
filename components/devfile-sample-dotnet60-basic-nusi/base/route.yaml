@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-dotnet60-basic-nusi
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-dotnet60-basic-nusi
+    app.kubernetes.io/part-of: vote-ui
+  name: devfile-sample-dotnet60-basic-nusi
+  namespace: nvinto-tenant
+spec:
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: devfile-sample-dotnet60-basic-nusi
+    weight: 100
+status: {}
