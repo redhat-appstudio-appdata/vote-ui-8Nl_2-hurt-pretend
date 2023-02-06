@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-dotnet60-basic-nusi
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:nvinto-tenant-devfile-sample-dotnet60-basic-nusi
+      - image: quay.io/redhat-appstudio/user-workload@sha256:2bbbc8eeb5819d54e4bdd3a35119bedacc8cddcfb9829e249ced64f3fba98638
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
