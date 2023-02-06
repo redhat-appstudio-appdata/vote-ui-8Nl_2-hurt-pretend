@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-dotnet60-basic-nusi
+  namespace: nvinto-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:2bbbc8eeb5819d54e4bdd3a35119bedacc8cddcfb9829e249ced64f3fba98638
+        name: container-image
+        resources: {}
+status: {}
